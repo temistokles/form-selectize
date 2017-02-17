@@ -37,6 +37,16 @@ class Selectize extends Nette\Forms\Controls\BaseControl
 	}
 
 
+        public function setEntity(array $entity) {
+                $this->entity = is_null($entity) ? [] : $entity;
+        }
+	
+        
+        public function getEntity() {
+                return $this->entity;
+        }
+        
+
 	public function setOptions(array $options)
 	{
 		foreach($options as $key => $value)
